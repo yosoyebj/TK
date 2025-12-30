@@ -41,7 +41,13 @@ def calculate_split():
 # Main Window setup
 root = tk.Tk()
 root.title("Token Splitter (VND)")
-root.geometry("600x750") # Increased size significantly
+root.geometry("600x750") 
+# Attempt to maximize window
+try:
+    root.state('zoomed') # Windows
+except:
+    root.attributes('-zoomed', True) # Linux
+
 root.resizable(True, True) 
 
 # --- DARK THEME STYLING ---
